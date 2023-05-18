@@ -1,29 +1,30 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package paquete02;
-
+package paquete04;
 import java.util.Scanner;
-
-public class Ejecutor {
-
-    public static void main(String[] args) {
+import paquete02.Vendedor;
+/**
+ *
+ * @author ASUS
+ */
+class Principal {
+    
+    public static void main(String[]args){
         // variables para ingreso de datos
         String nombre;
         int edad;
         double sMinino;
         int autos;
-        boolean bandera;
-        String opcion;
+        int bandera = 1;
         Scanner entrada = new Scanner(System.in);
         String cadenaFinal;
-        // Inicio de proceso iterativo 
-        bandera = true;
+        
         cadenaFinal = ""; // inicializo la variable que contendrá la cadena
         // final.
-        while (bandera) { // bandera == true
+        
+        while (bandera <= 3) { // bandera == true
             System.out.println("Ingrese el nombre del vendedor");
             nombre = entrada.nextLine();
             System.out.println("Ingrese edad del vendedor");
@@ -52,12 +53,8 @@ public class Ejecutor {
                     v.obtenerPagoMensual());
 
             entrada.nextLine(); // limpieza del buffer
-            System.out.println("Desea ingresar más vendedores. Ingrese n para"
-                    + " salir");
-            opcion = entrada.nextLine();
-            if (opcion.equals("n")) {
-                bandera = false;
-            }
+            
+            bandera = bandera + 1;
 
         }
         // cuando se sale del ciclo repetitivo debemos presentar en pantalla
@@ -65,3 +62,4 @@ public class Ejecutor {
         System.out.printf("%s\n", cadenaFinal);
     }
 }
+
