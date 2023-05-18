@@ -1,0 +1,7 @@
+Datos de Vendedor
+Nombre: Santiago
+Edad: 25
+Salario mínimo: 60,00
+Número de autos: 10
+Pago mensual: 1560,00
+
